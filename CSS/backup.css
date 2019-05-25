@@ -1,0 +1,92 @@
+/* body
+{
+  margin: 0;
+  padding: 0;
+  background: url(../Images/note.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+#logoimg
+{
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  transform: translate(185%, -10%);
+  top: 20%;
+  rigth: 45%;
+}
+
+h1
+{
+  color: #000000;
+}
+
+.loginbox
+{
+  width: 300px;
+  padding: 45px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background:: #191919;
+  text-align: center;
+}
+
+#wholepage
+{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 900px;
+}
+
+
+#userbox, #passwordbox
+{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding:  14px 10px;
+  width:  200px;
+  outline: none;
+  color: black;
+  transition: : 0.25s;
+}
+
+#submitbutton
+{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding:  10px 40px;
+  outline: none;
+  color: black;
+  transition: : 0.25s;
+}
+
+#submitbutton:focus
+{
+  border-color: #c120b7;
+}
+
+#userbox:hover , #passwordbox:hover
+{
+  width: 280px;
+  border-color: #c120b7;
+}
+#userbox:focus , #passwordbox:focus
+{
+  width: 280px;
+  border-color: #c120b7;
+} */
