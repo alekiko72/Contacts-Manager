@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/main.js"></script>
+  </head>
+  <body>
+    <div id="vertical-line"></div>
+    <div id="wholepage">
+      <img src="Images/leaflogo.png" id="logoimg" alt="logo">
+      <form  class="loginbox" action="menu.html" method="post">
+        <h1>Login</h1>
+        <input type="text" id="userbox"  placeholder="Username">
+        <input type="password" id="passwordbox" placeholder="Password">
+        <input type="submit" id="submitbutton" value="Login">
+      </form>
+
+      <div id="signupDiv">
+      <button id="signupbutton" onclick="document.getElementById('popup') .style.display='block'">Sign up</button>
+      </div>
+
+      <!-- Modal section -->
+      <div class="bg-modal" id="popup">
+	       <div class="modal-contents">
+		         <button id="closeIcon" onclick="document.getElementById('popup') .style.display='none'">x</button>
+
+		         <form action="">
+  			       <input type="text" placeholder="Name">
+               <input type="text" placeholder="Username">
+               <input type="password" placeholder="Password">
+               <input type="text" placeholder="Phone Number">
+
+  			       <input type="email" placeholder="E-Mail">
+  			       <button class="button">Submit</a>
+		         </form>
+
+	       </div>
+      </div>
+
+  </body>
+</html>
