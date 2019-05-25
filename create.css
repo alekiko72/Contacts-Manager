@@ -1,0 +1,70 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url(../Images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.accountbox{
+    width: 350px;
+    height: 700px;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box;
+    opacity: 0.6;
+    border-radius: 40px;
+}
+
+.avatar{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-10%, 10%);
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+    transform: translate(15%, 100%);
+    font-size: 38px;
+}
+
+.accountbox form{
+    margin: 0;
+    text-align: center;
+    transform: translate(0%, 20%);
+    font-size: 30px;
+}
+
+.accountbox input{
+    width: 75%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.accountbox input[type="text"]{
+    background: transparent;
+    border-color: yellowgreen;
+}
+
+.accountbox a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    background: yellowgreen;
+    border: none;
+    border-radius: 40px;
+    height: 100px;
+}
+
+.accountbox a:hover{
+    color: green;
+}
+
+.logo{
+    width: 125px;
+    height: 100px;
+    transform: translate(100%, -180%);
+}
