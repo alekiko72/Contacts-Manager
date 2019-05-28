@@ -70,11 +70,15 @@
                 <tbody id="fulltab">
                     <tr>
                     <th scope="row">1</th>
-                    <td>Mark Sims</td>
+                    <td class="pt-3-half" contenteditable="true">Mark Sims</td>
                     <td>408-995-2353</td>
                     <td>Hungary@gmale.com</td>
                     <td><img src="Images/leafedit.png" class="edit"></td>
-                    <td><img src="Images/leafdelete.png" class="edit"></td>
+                    <td>
+                        <span class="table-remove">
+                            <input type="image" id="saveform" src="Images/leafdelete.png" class="del">  
+                        </span>
+                    </td>
                     </tr>
                     <tr>
                     <th scope="row">2</th>
@@ -82,7 +86,11 @@
                     <td>234-343-2323</td>
                     <td>Plzinherit@rock.org</td>
                     <td><img src="Images/leafedit.png" class="edit"></td>
-                    <td><img src="Images/leafdelete.png" class="edit"></td>
+                    <td>
+                        <span class="table-remove">
+                            <input type="image" id="saveform" src="Images/leafdelete.png" class="del">  
+                        </span>
+                    </td>
                     </tr>
                     <tr>
                     <th scope="row">3</th>
@@ -90,7 +98,11 @@
                     <td>843-257-3335</td>
                     <td>Underdasea@krusty.org</td>
                     <td><img src="Images/leafedit.png" class="edit"></td>
-                    <td><img src="Images/leafdelete.png" class="edit"></td>
+                    <td>
+                        <span class="table-remove">
+                            <input type="image" id="saveform" src="Images/leafdelete.png" class="del">  
+                        </span>
+                    </td>
                     </tr>
                 </tbody>
             </table>
@@ -137,6 +149,50 @@
               });
             });
           });
+          
+            const $tableID = $('#tabledo');
+            const $BTN = $('#export-btn');
+            const $EXPORT = $('#export');
+
+
+            $tableID.on('click', '.table-remove', function () {
+
+                $(this).parents('tr').detach();
+            });
+
+            // A few jQuery helpers for exporting only
+            jQuery.fn.pop = [].pop;
+            jQuery.fn.shift = [].shift;
+
+            $BTN.on('click', () => {
+
+                const $rows = $tableID.find('tr:not(:hidden)');
+                const headers = [];
+                const data = [];
+
+                // Get the headers (add special header logic here)
+                $($rows.shift()).find('th:not(:empty)').each(function () {
+
+                headers.push($(this).text().toLowerCase());
+                });
+
+                // Turn all existing rows into a loopable array
+                $rows.each(function () {
+                const $td = $(this).find('td');
+                const h = {};
+
+                // Use the headers from earlier to name our hash keys
+                headers.forEach((header, i) => {
+
+                    h[header] = $td.eq(i).text();
+                });
+
+                data.push(h);
+                });
+
+                // Output the result
+                $EXPORT.text(JSON.stringify(data));
+            });
         </script>
 
     </body>

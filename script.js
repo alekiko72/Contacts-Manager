@@ -32,6 +32,8 @@ function addRow(){
 
     var deleto = document.createElement("IMG");
     deleto.setAttribute("src", "Images/leafdelete.png");
+    deleto.setAttribute("class", "table-remove");
     cell5.appendChild(deleto);
 
 }
+
