@@ -48,11 +48,14 @@ h1{
     width: 75%;
     margin-bottom: 20px;
     font-size: 20px;
+    
 }
 
 .accountbox input[type="text"]{
     background: transparent;
     border-color: yellowgreen;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .accountbox a{
@@ -128,4 +131,17 @@ h1{
     border-bottom: 1px solid darkslategrey;
     outline: none;
     text-align: center; 
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
 }
