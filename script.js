@@ -22,8 +22,8 @@ function addRow(){
     // Add the elements to each cell
     cell0.innerHTML = (table.rows.length-1);
     cell1.innerHTML = name;
-    cell2.innerHTML = email;
-    cell3.innerHTML = number;
+    cell2.innerHTML = number;
+    cell3.innerHTML = email;
 
     // Create Buttons for edit and delete
     var edito = document.createElement("IMG");
