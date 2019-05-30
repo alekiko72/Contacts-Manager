@@ -44,7 +44,7 @@ function addContact(first, last, num, e)
 {
 	document.getElementById("contactAddResult").innerHTML = "";
 	
-	var jsonPayload = '{ firstname : "' + first + '", lastname : "' + last + '", number : "' + num + '", email : "' + e + '", "userId" : ' + userId + '}';
+	var jsonPayload = '{ firstName : "' + first + '", lastName : "' + last + '", phoneNumber : "' + num + '", email : "' + e + '", "userID" : ' + userID + '}';
 	var url = urlBase + '/AddContact.' + extension;
 	
 	var xhr = new XMLHttpRequest();
@@ -114,7 +114,7 @@ function hideOrShow( elementId, showState )
 
 function doLogout()
 {
-	userId = 0;
+	userID = 0;
 
 	hideOrShow( "loggedInDiv", false);
 	hideOrShow( "accessUIDiv", false);
