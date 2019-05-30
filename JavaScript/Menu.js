@@ -97,6 +97,21 @@ function addContact(first, last, num, e)
 	
 }*/
 
+function hideOrShow( elementId, showState )
+{
+	var vis = "visible";
+	var dis = "block";
+	if( !showState )
+	{
+		vis = "hidden";
+		dis = "none";
+	}
+	
+	document.getElementById( elementId ).style.visibility = vis;
+	document.getElementById( elementId ).style.display = dis;
+}
+
+
 function doLogout()
 {
 	userId = 0;
