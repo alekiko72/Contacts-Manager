@@ -4,7 +4,7 @@
 	$username = $inData["username"];
 	$password = $inData["password"];
 	
-	$conn = new mysqli("localhost", "leinecke_SaRcc", "Wash9Lives!", "leinecke_COP4331");
+	$conn = new mysqli("localhost", "username", "password", "contactmanager");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
@@ -25,7 +25,6 @@
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
