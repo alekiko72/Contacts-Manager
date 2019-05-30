@@ -7,7 +7,7 @@
 	$phoneNumber = $inData["phoneNumber"];
 	$email = $inData["email"];
 	
-	$conn = new mysqli("localhost", "userId", "firstName", "lastName", "phoneNumber", "email", "contactmanager");
+	$conn = new mysqli("localhost", "username", "password", "contactmanager");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
@@ -28,7 +28,6 @@
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
