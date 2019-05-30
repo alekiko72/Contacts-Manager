@@ -23,11 +23,11 @@
         
 
         <!--Button Implementation-->     
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalCreate" tabindex="-1" role="dialog" aria-labelledby="ModalCreateLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Create Contact</h5>
+                <h5 class="modal-title" id="ModalCreateLabel">Create Contact</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -118,7 +118,7 @@
                 <input class="form-control" type="text" name="" id="searchy" placeholder="Enter Contact Name">
                 <br>
                 <br>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCreate">
                         Add a New Contact
                 </button>
                 <br>
@@ -126,7 +126,7 @@
                 <br>
                 <img src="Images/leaflogo.png" class="logo">
                 <br>
-                <a href="#">
+                <a href="index.html">
                     &nbsp; Logout &nbsp;
                 </a>
             </form>
@@ -149,7 +149,13 @@
 
 
         $tableID.on('click', '.table-remove', function () {
-        $(this).parents('tr').detach();
+            var flag = $(this).parents('tr');
+            if (confirm("Are you sure you want to delete this contact?")) {
+                flag.detach();
+             } 
+            else {
+                ;
+            }
         });
         </script>
 
