@@ -1,25 +1,31 @@
 body{
     padding: 0;
     margin: 0;
-    background: url(../Images/bg2.jpg);
+    background: url(../Images/bg2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
     font-family: sans-serif;
+
 }
 
 .accountbox{
-    width: 350px;
-    height: 700px;
+    padding: 0;
+    margin: 0;
+    width: 350px; /*350px*/
+    height: 700px; /*700px*/
     background: #fff;
-    color: #000;
+    color: darkslategrey;
     box-sizing: border-box;
-    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 40px;
+    position: fixed;
 }
 
 .avatar{
-    width: 150px;
-    height: 100px;
+    width: 150px; /*150*/
+    height: 100px; /*100*/
     position: absolute;
     transform: translate(-10%, 10%);
 }
@@ -42,11 +48,14 @@ h1{
     width: 75%;
     margin-bottom: 20px;
     font-size: 20px;
+    
 }
 
 .accountbox input[type="text"]{
     background: transparent;
     border-color: yellowgreen;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .accountbox a{
@@ -60,11 +69,80 @@ h1{
 }
 
 .accountbox a:hover{
-    color: green;
+    background: darkslategrey;
+    color: white;
 }
 
 .logo{
+    padding: 0;
+    margin: 0;
     width: 125px;
     height: 100px;
-    transform: translate(100%, -180%);
+    transform: translate(10%, 0%);
+}
+
+.scrollbar {
+
+    height: 70%;
+    width: 70%;
+    overflow: auto;
+    float: right;
+}
+.table-wrap {
+
+    float: right;
+    transform: translate(-3%, 0%);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    overflow: auto;
+}
+
+.btn{
+    background: yellowgreen;
+    color: #000;
+    border-radius: 40px;
+    border-color: white;
+    font-size: 25px;
+}
+
+
+.btn:hover{
+    background: darkslategrey;
+    border-color: white;
+}
+
+.modal-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.modal-body{
+    font-size: 25px;
+    background: rgba(220, 240, 204, 1);
+    text-align: center;
+    color: darkslategray;
+}
+.modal-content{
+    border-radius: 15px;
+}
+.modal-body input[type="text"]{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid darkslategrey;
+    outline: none;
+    text-align: center; 
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
 }
