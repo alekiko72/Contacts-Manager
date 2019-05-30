@@ -1,12 +1,10 @@
 <?php
-
 	$inData = getRequestInfo();
 	
 	$id = 0;
-
-	$conn = new mysqli("localhost", "leinecker", "TestMeNow", "COP4331LAMP");
+	$conn = new mysqli("localhost", "username", "password", "contactmanager");
 	if ($conn->connect_error) 
-	{
+	{ 	
 		returnWithError( $conn->connect_error );
 	} 
 	else
@@ -31,7 +29,6 @@
 	{
 		return json_decode(file_get_contents('php://input'), true);
 	}
-
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
