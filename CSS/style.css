@@ -157,3 +157,19 @@ ul li
   padding: 10px;
   display: inline;
 }
+
+#loginResult
+{
+  left: 67.5%;
+  top: 22%;
+  position: absolute;
+  color: #f4426e;
+}
+
+#registrationAlert
+{
+  top: 71%;
+  left: 32%;
+  position: absolute;
+  color: #f44256;
+}
