@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Log In</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css?version=51">
     <script type="text/javascript" src="JavaScript/main.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -13,11 +13,11 @@
       <!--Inserts the logo on the page-->
       <img src="Images/leaflogo.png" id="logoimg" alt="logo">
       <!-- Login box creation -->
-      <form  class="loginbox" onsubmit="return completeInfo();" action="menu.html" method="POST">
+      <form  class="loginbox" autocomplete="off">
         <h1>Login</h1>
-        <input type="text" name="userbox" id="userbox"  placeholder="Username">
-        <input type="password" name="passwordbox" id="passwordbox" placeholder="Password">
-        <input type="submit" name="loginbutton" id="loginbutton" value="Login">
+        <input type="text" id="userbox"  placeholder="Username">
+        <input type="password" id="passwordbox" placeholder="Password">
+        <button type="button" id="loginbutton" class="buttons" onclick="completeInfo();" >Login</button>
       </form>
 
       <!-- Sign up button creation -->
@@ -26,21 +26,19 @@
       </div>
     </div>
 
+    <span id="loginResult"></span>
+
       <!-- Modal creation for registration-->
   <div class="modal fade" tabindex="-1" id="popup" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <h4 id="registertitle" class="modal-title">Sign Up</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" onclick="erase();">&times;</button>
 
         </div>
         <div class="modal-body">
           <form>
-            <div class="form-group">
-              <label for="inputFullName">Full Name</label>
-              <input class="form-control" type="passtextword" id="inputFullName" />
-            </div>
             <div class="form-group">
               <label for="inputUserName">Username</label>
               <input class="form-control" type="text" id="inputUserName" />
@@ -52,8 +50,9 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Register</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <span id="registrationAlert"></span>
+          <button type="submit" class="btn btn-primary" onclick="register();">Register</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="erase();">Close</button>
         </div>
       </div>
     </div>
@@ -78,4 +77,3 @@
   </footer>
 
 </html>
-
