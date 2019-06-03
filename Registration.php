@@ -2,8 +2,8 @@
 	$inData = getRequestInfo();
 
   $userId = $inData["userId"];
-  $username = $inData["username"];
-  $password = $inData["password"];
+  $newUser = $inData["newUser"];
+  $newPassword = $inData["newPassword"];
 
 
 
@@ -14,7 +14,7 @@
 	}
 	else
 	{
-		$sql = "insert into users (ID, username, password) VALUES ('" . $userId . "','" . $username . "','" . $password . "')";
+		$sql = "insert into users (ID, username, password) VALUES ('" . $userId . "','" . $newUser . "','" . $newPassword . "')";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
