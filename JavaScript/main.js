@@ -68,27 +68,28 @@ function register()
     return false;
   }
 
-  var jsonPayload = '{"userId" : "' + userId + '", "username" : "' + newUsername + '", "password" : ' + newPassword + '}';
-  var url = urlBase + '/Registration.' + extension;
+ 	var jsonPayload = '{ "userId" : "' + userId + '", "newUser" : "' + newUsername + '", "newPassword" : "' + newPassword + '", "userId" : ' + userId + '}';
 
-  var xhr = new XMLHttpRequest();
+	var url = urlBase + '/Registration.' + extension;
+
+	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-  try
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
 	{
 		xhr.onreadystatechange = function()
 		{
-			if (this.readyState == 4 && this.status == 200)
-			{
-				console.log("you got boi");
-			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		 console.log(err.message);
+
 	}
+
+  erase();
+  $('#popup').modal('hide');
+
 }
 
 function doLogin()
